@@ -1989,6 +1989,12 @@
       "value": "Définir l'Emplacement de Téléchargement"
     }
   ],
+  "torrents.properties.last_xfer": [
+    {
+      "type": 0,
+      "value": "Dernier transfert"
+    }
+  ],
   "torrents.properties.base.path": [
     {
       "type": 0,

@@ -116,6 +116,16 @@ class TorrentDetailItemsList extends React.Component {
     const lockedIDs = this.getLockedIDs();
     let torrentDetailItems = this.state.torrentDetails.slice();
 
+    let found = false;
+    for (let item of torrentDetailItems) {
+      if (item.id === 'lastTransfer') {
+        found = true;
+      }
+    }
+    if (!found) {
+      torrentDetailItems.push({id: 'lastTransfer', visible: false});
+    }
+
     if (this.props.torrentListViewSize === 'expanded') {
       let nextUnlockedIndex = lockedIDs.length;
 
